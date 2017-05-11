@@ -1,0 +1,30 @@
+{
+  "name": "react-sandbox",
+  "version": "1.0.0",
+  "description": "package file for react-sandbox",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jmacvey/react-sandbox.git"
+  },
+  "author": "jmacvey",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jmacvey/react-sandbox/issues"
+  },
+  "homepage": "https://github.com/jmacvey/react-sandbox#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "webpack": "^2.5.1"
+  },
+  "dependencies": {
+    "react-hot-loader": "^3.0.0-beta.7",
+    "react": "^15.5.4",
+    "react-dom": "^15.5.4",
+    "react-redux": "^5.0.4",
+    "redux": "^3.6.0"
+  }
+}
