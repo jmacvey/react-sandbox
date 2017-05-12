@@ -1,4 +1,4 @@
-# Developer Sandbox for React Development
+# Developer Sandbox for React/Redux Development
 
 ## Instructions 
 
