@@ -7,23 +7,38 @@ import { Reducers } from './reducers';
 import { AppContainer } from 'react-hot-loader';
 import { Sandbox } from './sandbox';
 
-// initialize the logging middleware
-const logger = createLogger();
+/**
+ * Redux initialization file for the sandbox
+ * Configures the store and exports the redux app
+ */
 
-// configure the store
-export const configureStore = (initialState) => {
 
-    const store = createStore(Reducers, initialState || {}, applyMiddleware(logger));
+
+/**
+ * @param initialState the initial state of the app
+ * Remarks: This function is exported and a single store is created
+ * in the main entry point.
+ */
+export const configureStore = (initialState = {}) => {
+    const logger = createLogger();
+    const store = createStore(Reducers, initialState, applyMiddleware(logger));
+    
+    // Enable Webpack hot module replacement for reducers
     if (module.hot) {
-        // Enable Webpack hot module replacement for reducers
         module.hot.accept('./reducers', () => {
             const nextRootReducer = require('./reducers').Reducers;
             store.replaceReducer(nextRootReducer);
         });
-    }//
+    } 
+
+
     return store;
 }
 
+/**
+ * The Redux application container
+ * @param {} store the Redux store
+ */
 export const ReduxApp = ({ store }) => {
     return (
             <Provider store={store}>

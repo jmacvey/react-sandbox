@@ -1,4 +1,7 @@
 {
+    // Presets for transpilation (es2015, react)
     "presets": [ "es2015", "react" ],
+
+    // plugins 
     "plugins": [ "react-hot-loader/babel" ]
 }
