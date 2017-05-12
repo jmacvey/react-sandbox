@@ -7,7 +7,17 @@ import React from 'react';
 export const Sandbox = () => {
     return (
         <div>
-            My default app :)
+            <strong>
+            <p>
+               Welcome to the React-Redux ES2015 Compatible Sandbox!
+               <br/>
+               <br/>
+               Now you can do react development locally without fussing with all those dumb configuration files.
+               <br/>
+               <br/>
+               Happy Coding!
+            </p>
+            </strong>
         </div>
     );
 };
