@@ -1,4 +1,5 @@
 import { combineReducers } from 'redux';
+import { reduxTimer } from './redux-timer/redux-timer-reducers';
 
 /**
  * The primary application reducer
@@ -16,5 +17,6 @@ const app = (state = {}, action) => {
  * Primary reducers object
  */
 export const Reducers = combineReducers({
-    app
+    app,
+    reduxTimer
 });
