@@ -17,9 +17,11 @@ export const Sandbox = () => {
             <div>{`----Redux Timer Instances----`}</div>
             <ReduxTimer/>
             <p>
-                Try adding another Redux Timer.  What happens?  How can this be fixed? <br/>
-                Hint: Every mounted timer might need a key corresponding to their store. <br/>
-                Besides altering the store, what else would we need to do in componentWillUnmount?
+                {
+                String.raw`Try adding another Redux Timer.  What happens?  How can this be fixed?\n
+                Hint: Every mounted timer might need a key corresponding to their store.\n
+                Besides altering the store, what else would we need to do in componentWillUnmount?`
+                }
             </p>
         </div>
     );
