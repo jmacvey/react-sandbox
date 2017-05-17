@@ -20,7 +20,7 @@ export const Tab = ({data = samples, match}) => {
                 })}
             </ul>
         </div>
-    )
+    );
 }
 
 /**
