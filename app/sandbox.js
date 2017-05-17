@@ -8,7 +8,7 @@ import {Tab, Bio} from './route-components';
  */
 export const Sandbox = ({history}) => {
     return (
-        <Router exact path="/" history={history}>
+        <Router history={history}>
             <div>
                 <Tab/>
                 <Bio/>
@@ -18,6 +18,9 @@ export const Sandbox = ({history}) => {
     );
 };
 
+/**
+ * Introductory component
+ */
 const Intro = () => {
     return (
         <div>
