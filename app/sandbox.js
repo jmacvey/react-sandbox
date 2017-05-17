@@ -1,6 +1,7 @@
 import React from 'react';
 import {Router, Route, Switch, Link} from 'react-router-dom';
 import {Tab, Bio} from './route-components';
+import styles from '../sass/main.scss';
 
 /**
  * This is the primary Sandbox. 
@@ -23,7 +24,7 @@ export const Sandbox = ({history}) => {
  */
 const Intro = () => {
     return (
-        <div>
+        <div className="routing-intro">
             <strong>
                     <p>
                     Check out this simple react router demo!<br/>

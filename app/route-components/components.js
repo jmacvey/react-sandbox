@@ -1,6 +1,7 @@
 import React from 'react';
 import {samples} from './sample-data';
 import {Link} from 'react-router-dom';
+import styles from '../../sass/main.scss';
 
 /**
  * This tab represents a list of heroes that we can click
@@ -8,8 +9,8 @@ import {Link} from 'react-router-dom';
  */
 export const Tab = ({data = samples, match}) => {
     return (
-        <div>
-            <h2>Heroes of the Modern World</h2>
+        <div className="tab">
+            <h2 className="title" >Heroes of the Modern World</h2>
             <ul>
                 {data.map(r => {
                     return (

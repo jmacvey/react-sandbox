@@ -38,7 +38,7 @@ module.exports = {
              * Specifies any tests to run
              */
             test: /\.js?$/,
-            
+
             /**
              * Exclude node_modules from transpilation processes
              */
@@ -55,6 +55,10 @@ module.exports = {
              * relative to the app folder
              */
             include: path.join(__dirname, 'app')
+        },
+        {
+            test: /\.scss$/,
+            loaders: ['style-loader', 'css-loader', 'sass-loader']
         }],
     },
 
