@@ -1,5 +1,6 @@
 const webpack = require('webpack');
 const path = require('path');
+var ExtractTextPlugin = require('extract-text-webpack-plugin')
 
 module.exports = {
 
@@ -38,7 +39,7 @@ module.exports = {
              * Specifies any tests to run
              */
             test: /\.js?$/,
-            
+
             /**
              * Exclude node_modules from transpilation processes
              */
@@ -47,15 +48,19 @@ module.exports = {
             /**
              * Use babel to transpile ES2015, React code (see .babelrc config file)
              */
-            loader: 'babel-loader',
+            loaders: 'babel-loader',
 
             /**
              * Any import statements that 
              * aren't relative will be 
              * relative to the app folder
-             */
+               */
             include: path.join(__dirname, 'app')
-        }],
+        },
+        {
+    test: /\.scss$/,
+    loaders: ['style-loader', 'css-loader', 'sass-loader']
+  }]
     },
 
     context: __dirname,
