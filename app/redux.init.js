@@ -39,11 +39,11 @@ export const configureStore = (initialState = {}) => {
  * The Redux application container
  * @param {} store the Redux store
  */
-export const ReduxApp = ({ store }) => {
+export const ReduxApp = ({ store, history }) => {
     return (
             <Provider store={store}>
                 <AppContainer>
-                    <Sandbox/>
+                    <Sandbox history={history}/>
                 </AppContainer>
             </Provider>
     );
